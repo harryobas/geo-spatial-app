@@ -1,0 +1,93 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+
+countries = [
+    { name: 'Andorra', location: 'POINT(42.546245 1.601554)' },
+    { name: 'United Arab Emirates', location: 'POINT(23.424076 53.847818)' },
+    { name: 'Afghanistan', location: 'POINT(33.93911 67.709953)' },
+    { name: 'Antigua and Barbuda', location: 'POINT(17.060816 -61.796428)' },
+    { name: 'Anguilla', location: 'POINT(18.220554 -63.068615)' },
+    { name: 'Albania', location: 'POINT(41.153332 20.168331)' },
+    { name: 'Armenia', location: 'POINT(40.069099 45.038189)' },
+    { name: 'Netherlands Antilles', location: 'POINT(12.226079 -69.060087)' },
+    { name: 'Angola', location: 'POINT(-11.202692 17.873887)' },
+    { name: 'Antarctica', location: 'POINT(-75.250973 -0.071389)' },
+    { name: 'Argentina', location: 'POINT(-38.416097 -63.616672)' },
+    { name: 'Azerbaijan', location: 'POINT(40.143105 47.576927	)' },
+    { name: 'Barbados', location: 'POINT(13.193887 -59.543198)' },
+    { name: 'Bangladesh', location: 'POINT(23.684994 90.356331)' },
+    { name: 'Bosnia and Herzegovina', location: 'POINT(43.915886 17.679076)' },
+    { name: 'Belgium', location: 'POINT(50.503887 4.469936)' },
+    { name: 'Burkina Faso', location: 'POINT(12.238333 -1.561593)' },
+    { name: 'Bulgaria', location: 'POINT(42.733883 25.48583)' },
+    { name: 'Chile', location: 'POINT(-35.675147 -71.542969)' },
+    { name: 'Cook Islands', location: 'POINT(-21.236736	-159.777671)' },
+    { name: 'Côte d Ivoire', location: 'POINT(7.539989 -5.54708)' },
+    { name: 'Switzerland', location: 'POINT(46.818188 8.227512)' },
+    { name: 'Congo [Republic]', location: 'POINT(-0.228021 15.827659)' },
+    { name: 'Central African Republic', location: 'POINT(6.611111 20.939444)' },
+    { name: 'Congo [DRC]', location: 'POINT(-4.038333 21.758664)' },
+    { name: 'Cocos [Keeling] Islands', location: 'POINT(-12.164165	96.870956)' },
+    { name: 'Canada', location: 'POINT(56.130366 -106.346771)' },
+    { name: 'Brazil', location: 'POINT(-14.235004 -51.92528)' },
+    { name: 'Bolivia', location: 'POINT(-16.290154 -63.588653)' },
+    { name: 'Brunei', location: 'POINT(4.535277	114.727669)' },
+    { name: 'Bermuda', location: 'POINT(32.321384 -64.75737)' },
+    { name: 'Benin', location: 'POINT(9.30769 2.315834)' },
+    { name: 'Burundi', location: 'POINT(-3.373056 29.918886)' },
+    { name: 'Dominica', location: 'POINT(15.414999 -61.370976)' },
+    { name: 'Algeria', location: 'POINT(28.033886 1.659626)' },
+    { name: 'French Guiana', location: 'POINT(3.933889 -53.125782)' },
+    { name: 'Georgia', location: 'POINT(42.315407 43.356892)' },
+    { name: 'Grenada', location: 'POINT(12.262776 -61.604171)' },
+    { name: 'Fiji', location: 'POINT(-16.578193	179.414413)' },
+    { name: 'Micronesia', location: 'POINT(7.425554	150.550812)' },
+    { name: 'Faroe Islands', location: 'POINT(61.892635	-6.911806)' },
+    { name: 'France', location: 'POINT(46.227638 2.213749)' },
+    { name: 'Gabon', location: 'POINT(-0.803689	11.609444)' },
+    { name: 'United Kingdom', location: 'POINT(55.378051 -3.435973)' },
+    { name: 'Finland', location: 'POINT(61.92411 25.748151)' },
+    { name: 'Ethiopia', location: 'POINT(9.145 40.489673)' },
+    { name: 'Spain', location: 'POINT(40.463667	-3.74922)' },
+    { name: 'Eritrea', location: 'POINT(15.179384 39.782334)' },
+    { name: 'Western Sahara', location: 'POINT(24.215527 -12.885834)' },
+    { name: 'Egypt', location: 'POINT(26.820553	30.802498)' },
+    { name: 'Estonia', location: 'POINT(58.595272 25.013607)' },
+    { name: 'Ecuador', location: 'POINT(-1.831239 -78.183406)' },
+    { name: 'Denmark', location: 'POINT(56.26392 9.501785)' },
+    { name: 'Djibouti', location: 'POINT(11.825138	42.590275)' },
+    { name: 'Germany', location: 'POINT(51.165691 10.451526)' },
+    { name: 'Czech Republic', location: 'POINT(49.817492 15.472962)' },
+    { name: 'Cyprus', location: 'POINT(35.126413 33.429859)' },
+    { name: 'Christmas Island', location: 'POINT(-10.447525	105.690449)' },
+    { name: 'Cape Verde', location: 'POINT(16.002082 -24.013197)' },
+    { name: 'Cuba', location: 'POINT(21.521757 -77.781167)' },
+    { name: 'Costa Rica', location: 'POINT(9.748917	-83.753428)' },
+    { name: 'Colombia', location: 'POINT(4.570868 -74.297333)' },
+    { name: 'China', location: 'POINT(35.86166 104.195397)' },
+    { name: 'Cameroon', location: 'POINT(7.369722 12.354722)' },
+    { name: 'Belize', location: 'POINT(	17.189877 -88.49765)' },
+    { name: 'Belarus', location: 'POINT(53.709807 27.953389)' },
+    { name: 'Botswana', location: 'POINT(-22.328474	24.684866)' },
+    { name: 'Bouvet Island', location: 'POINT(-54.423199 3.413194)' },
+    { name: 'Bhutan', location: 'POINT(27.514162 90.433601)' },
+    { name: 'Bahamas', location: 'POINT(25.03428 -77.39628)' },
+    { name: 'Falkland Islands [Islas Malvinas]', location: 'POINT(-51.796253 -59.523613	)' },
+    { name: 'Dominican Republic', location: 'POINT(18.735693 -70.162651)' },
+    { name: 'Gambia', location: 'POINT(13.443182 -15.310139)' },
+    { name: 'Greenland', location: 'POINT(71.706936	-42.604303)' },
+    { name: 'Gibraltar', location: 'POINT(36.137741	-5.345374)' },
+    { name: 'Ghana', location: 'POINT(7.946527 -1.023194)' },
+    { name: 'Guernsey', location: 'POINT(49.465691 -2.585278)' }
+    
+]	
+	
+
+countries.each do |c| 
+    Place.create(c)
+end 
